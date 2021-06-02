@@ -1,0 +1,96 @@
+{
+  "browserConfigName": "browserconfig",
+  "dfltTileColor": "#ffffff",
+  "validTileColors": [
+    "#99b433",
+    "#00a300",
+    "#1e7145",
+    "#ff0097",
+    "#9f00a7",
+    "#7e3878",
+    "#603cba",
+    "#1d1d1d",
+    "#00aba9",
+    "#eff4ff",
+    "#2d89ef",
+    "#2b5797",
+    "#ffc40d",
+    "#e3a21a",
+    "#da532c",
+    "#ee1111",
+    "#b91d47",
+    "#ffffff"
+  ],
+  "files": {
+    "opengraph": [
+      {
+        "filename": "og-img.png",
+        "width": 1280,
+        "height": 720,
+        "mime": ["image/png"]
+      }
+    ],
+    "android": [
+      {
+        "filename": "android-chrome-192x192.png",
+        "width": 192,
+        "height": 192,
+        "mime": ["image/png"]
+      },
+      {
+        "filename": "android-chrome-256x256.png",
+        "width": 256,
+        "height": 256,
+        "mime": ["image/png"]
+      }
+    ],
+    "apple": [
+      {
+        "filename": "apple-touch-icon.png",
+        "width": 180,
+        "height": 180,
+        "mime": ["image/png"]
+      }
+    ],
+    "safari": [
+      {
+        "filename": "safari-pinned-tab.svg",
+        "mime": ["image/svg+xml", "application/xml"]
+      }
+    ],
+    "mstile": [
+      {
+        "filename": "mstile-150x150.png",
+        "width": 150,
+        "height": 150,
+        "mime": ["image/png"]
+      },
+      {
+        "filename": "mstile-310x310.png",
+        "width": 310,
+        "height": 310,
+        "mime": ["image/png"]
+      }
+    ],
+    "defaults": [
+      {
+        "filename": "favicon-16x16.png",
+        "width": 16,
+        "height": 16,
+        "mime": ["image/png"]
+      },
+      {
+        "filename": "favicon-32x32.png",
+        "width": 32,
+        "height": 32,
+        "mime": ["image/png"]
+      },
+      {
+        "filename": "favicon.ico",
+        "width": 16,
+        "height": 16,
+        "mime": ["image/vnd.microsoft.icon", "image/x-icon"]
+      }
+    ]
+  }
+}
