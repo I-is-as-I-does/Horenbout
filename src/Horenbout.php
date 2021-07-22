@@ -1,9 +1,7 @@
 <?php
 /* This file is part of Horenbout | SSITU | (c) 2021 I-is-as-I-does | MIT License */
 namespace SSITU\Horenbout;
-
-use SSITU\Jack\Jack;
-
+use \SSITU\Jack;
 class Horenbout
 {
     //@doc: source for valid colors: https://colorlib.com/etc/metro-colors.html
@@ -13,7 +11,7 @@ class Horenbout
 
     public function __construct($configOrPath = null)
     {
-        $dflt = Jack::File()->readJson(dirname(__DIR__) . '/config/default-config.json');
+        $dflt = Jack\File::readJson(dirname(__DIR__) . '/config/default-config.json');
         if (empty($dflt)) {
             return ['err' => 'default config not found'];
         }
@@ -21,7 +19,7 @@ class Horenbout
             $configOrPath = $dflt;
         } else {
             if (is_file($configOrPath)) {
-                $configOrPath = Jack::File()->readJson($configOrPath);
+                $configOrPath = Jack\File::readJson($configOrPath);
             }
             if (!is_array($configOrPath) || empty($configOrPath)) {
                 return ['err' => "invalid config or path: " . $configOrPath];
@@ -53,7 +51,7 @@ class Horenbout
     {
         $rslt = [];
         foreach ($matches as $filename => $tmpFile) {
-            $dest = Jack::File()->reqTrailingSlash($destDir) . $filename;
+            $dest = Jack\File::reqTrailingSlash($destDir) . $filename;
             $save = move_uploaded_file($tmpFile, $dest);
             if ($save !== false) {
                 $rslt['success'] = $dest;
@@ -107,7 +105,7 @@ class Horenbout
                 return ['err' => 'xml template not found'];
             }
             if ($writeFile) {
-                return Jack::File()->write($filecontent, Jack::File()->reqTrailingSlash($destDir) . $this->config['browserConfigName'] . '.xml', true);
+                return Jack\File::write($filecontent, Jack\File::reqTrailingSlash($destDir) . $this->config['browserConfigName'] . '.xml', true);
             }
             return $filecontent;
         }

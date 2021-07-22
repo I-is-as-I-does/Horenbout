@@ -13,7 +13,6 @@ TBD
 ## Contributing
 
 Yes please! You can take a loot at [CONTRIBUTING](CONTRIBUTING.md).
-This repo also features a [Discussions](https://github.com/I-is-as-I-does/Euclid/discussions) tab.
 
 ## License
 
